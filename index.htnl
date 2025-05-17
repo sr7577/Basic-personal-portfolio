@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yerrapareddy Venkat Sai Sreeja</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .primary-color {
+            color: #3498db;
+        }
+        .secondary-color {
+            color: #2ecc71;
+        }
+        #hero-section {
+            background-image: linear-gradient(to bottom, #3498db, #2ecc71);
+            background-size: 100% 300px;
+            background-position: 0% 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        #profile-section {
+            padding: 50px;
+        }
+        #education-section {
+            padding: 50px;
+        }
+        #projects-section {
+            padding: 50px;
+        }
+        #project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        #project-grid .project {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #project-details-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+        }
+        #project-details-modal .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #skills-section {
+            padding: 50px;
+        }
+        #certifications-section {
+            padding: 50px;
+        }
+        #contact-section {
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Yerrapareddy Venkat Sai Sreeja</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#hero-section">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#profile-section">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education-section">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects-section">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills-section">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certifications-section">Certifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-section">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="hero-section">
+        <h1>Welcome to my website!</h1>
+    </div>
+    <div id="profile-section">
+        <h2>Profile</h2>
+        <p>An eager learner constantly seeking new challenges to expand skills in the world of computer science. Passionate about leveraging coding expertise and hands-on experience to contribute to exciting projects and drive meaningful results in a dynamic tech environment.</p>
+        <p>Contact: +91 9000047621 | <a href="mailto:yvssreeja@gmail.com">yvssreeja@gmail.com</a> | Hyderabad, Telangana - 500034, India</p>
+    </div>
+    <div id="education-section">
+        <h2>Education</h2>
+        <ul>
+            <li>G. Narayanamma Institute of Technology and Science - B.Tech in CSE (Data Science), CGPA: 8.65 (2022–2026)</li>
+            <li>Excellencia College - Intermediate - MPC, Percentage: 93% (2020–2022)</li>
+            <li>Meridian School - Secondary Education (CBSE), Percentage: 82% (2007–2020)</li>
+        </ul>
+    </div>
+    <div id="projects-section">
+        <h2>Projects</h2>
+        <div id="project-grid">
+            <div class="project" onclick="showProjectDetails(1)">
+                <h3>Age-Based Tourist Recommendation Website</h3>
+                <p>A dynamic site tailored to provide tourist recommendations based on the user’s age group.</p>
+            </div>
+            <div class="project" onclick="showProjectDetails(2)">
+                <h3>Driver Drowsiness Detection</h3>
+                <p>Real-time system to detect driver fatigue using facial landmarks, eye closure, and yawning detection.</p>
+            </div>
+        </div>
+    </div>
+    <div id="project-details-modal">
+        <div class="modal-content">
+            <h2 id="project-title"></h2>
+            <p id="project-description"></p>
+            <button onclick="hideProjectDetails()">Close</button>
+        </div>
+    </div>
+    <div id="skills-section">
+        <h2>Skills</h2>
+        <h3>Technical Skills:</h3>
+        <ul>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Power BI (Basics)</li>
+        </ul>
+        <h3>Software:</h3>
+        <ul>
+            <li>MS Office</li>
+            <li>PowerPoint</li>
+            <li>Word</li>
+            <li>Google Drive</li>
+            <li>Google Docs</li>
+        </ul>
+        <h3>Soft Skills:</h3>
+        <ul>
+            <li>Effective Communication</li>
+            <li>Team Collaboration</li>
+            <li>Adaptability</li>
+            <li>Learning Agility</li>
+        </ul>
+    </div>
+    <div id="certifications-section">
+        <h2>Certifications</h2>
+        <ul>
+            <li>IBM Data Fundamentals certification</li>
+            <li>Certified by HackerRank – Basic Java Assessment</li>
+            <li>Power BI Workshop & Hackathon Participation</li>
+            <li>Design Thinking Workshop – Team Collaboration & Innovation</li>
+            <li>2-day Workshop – Humanities & Mathematics in Industry 4.0</li>
+        </ul>
+    </div>
+    <div id="contact-section">
+        <h2>Get in Touch</h2>
+        <p>Contact: +91 9000047621 | <a href="mailto:yvssreeja@gmail.com">yvssreeja@gmail.com</a> | Hyderabad, Telangana - 500034, India</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showProjectDetails(projectId) {
+            document.getElementById("project-details-modal").style.display = "block";
+            if (projectId === 1) {
+                document.getElementById("project-title").innerHTML = "Age-Based Tourist Recommendation Website";
+                document.getElementById("project-description").innerHTML = "A dynamic site tailored to provide tourist recommendations based on the user’s age group. Improves user engagement through customized content. Technologies: HTML, CSS";
+            } else if (projectId === 2) {
+                document.getElementById("project-title").innerHTML = "Driver Drowsiness Detection";
+                document.getElementById("project-description").innerHTML = "Real-time system to detect driver fatigue using facial landmarks, eye closure, and yawning detection. Alerts drivers to avoid accidents. Technologies: Python, OpenCV, Dlib, Haar Cascades";
+            }
+        }
+        function hideProjectDetails() {
+            document.getElementById("project-details-modal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
